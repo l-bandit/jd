@@ -1,0 +1,142 @@
+body {
+	margin: 0;
+	background-color: #F2F2F2;
+}
+
+#top{
+	margin-top: 14px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#top_return{
+	width: 10%;
+	font-size:28px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+#top_search {
+	display: flex;
+	justify-content: center;
+}
+
+#search {
+	height: 36px;
+	width: 280px;
+	border: none;
+	border-radius: 80px;
+	background-image: url(../img/top-search.png);
+	background-size: 17px 17px;
+	background-position: 15px 10px;
+	background-repeat: no-repeat;
+	padding-left: 38px;
+}
+
+#bottom {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: white;
+}
+
+#bottom_flex {
+	display: flex;
+	height: 58px;
+}
+
+#bottom_flex>div {
+	flex: 1;
+	text-align: center;
+}
+
+#bottom_flex img {
+	margin-top: 6px;
+	width: 30px;
+	height: 30px;
+}
+
+#bottom_flex>div>p {
+	margin: 0;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+#order{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	background-color: white;
+	border-top: solid 3px #F2F2F2;
+	border-bottom: solid 3px #F2F2F2;
+}
+
+#order>div{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+}
+
+#order_multiple>div,#order_sale>div,#order_price>div{
+	width: 10px;
+}
+
+#order img{
+	width: 100%;
+	display: block;
+}
+
+.commodity{
+	width: 100%;
+	height: 130px;
+	margin-top: 2px;
+	display: flex;
+	background-color: white;
+	padding-top: 10px;
+}
+
+.commodity_left{
+	width: 30%;
+	height: 120px;
+}
+
+.commodity_left>img{
+	width: 100%;
+}
+
+.commodity_right{
+	width: 70%;
+	margin-left: 10px;
+}
+
+.commodity_name{
+	height: 40px;
+	font: normal bold 16px "微软雅黑";
+}
+
+.commodity_price{
+	margin-top: 3px;
+	height: 20px;
+	font: normal bold 14px "微软雅黑";
+	color: red;
+}
+
+.commodity_price>span{
+	font-size: 18px;
+}
+
+.commodity_comment{
+	margin-top: 3px;
+	font: normal 100 14px "微软雅黑";
+	color: grey;
+}
+
+.commodity_shop{
+	margin-top: 3px;
+	font: normal 100 14px "微软雅黑";
+	color: grey;
+}
