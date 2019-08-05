@@ -16,6 +16,8 @@ public class ShoppingCart {
 	private int sizeid;
 	//颜色表id  外键
 	private int colorid;
+	//商品数量
+	private int count;
 	//加入购物车时间
 	private Timestamp time;
 	//获取商品信息时需要的属性
@@ -74,6 +76,12 @@ public class ShoppingCart {
 	}
 	public void setColorid(int colorid) {
 		this.colorid = colorid;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
 	}
 	public Timestamp getTime() {
 		return time;
