@@ -3,7 +3,7 @@ package com.neuedu.jd.model.bean;
 import java.sql.Timestamp;
 
 /**订单表*/
-public class Order {
+public class Orders {
 	
 	//主键
 	private int id;
