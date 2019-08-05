@@ -41,7 +41,7 @@ $(document).ready(function() {
 	// 点击二级分类进入商品列表
 	$(document).on("click", ".secondarySort", function() {
 		var sort2id = $(this).attr("data-id");
-		location.href = "页面.html?sort2id=" + sort2id;
+		location.href = "commodity.html?sort2id=" + sort2id;
 	});
 	
 	// 主页

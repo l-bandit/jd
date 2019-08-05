@@ -72,7 +72,6 @@ function divInterval() {
 	moveId = setInterval(LeftMove, 8); //设置一个10毫秒定时器
 }
 
-
 timeId = setInterval(divInterval, 3000); //设置一个3秒的定时器。
 
 function stop() {
@@ -84,10 +83,10 @@ function start() {
 	timeId = setInterval(divInterval, 2000);
 }
 
-// //页面失去焦点停止
-// onblur = function() {
-// 	stop();
-// }
+//页面失去焦点停止
+onblur = function() {
+	stop();
+}
 //页面获取焦点时开始
 onfocus = function() {
 	start();

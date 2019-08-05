@@ -190,11 +190,16 @@ input {
 }
 
 .ranking_img>img {
-	width: 100%;
+	width: 124px;
+	height: 124px;
 }
 
 .ranking_info {
 	margin-left: 60px;
+}
+
+.ranking_info>p{
+	margin-top: 0px;
 }
 
 #ranking_bottom {
