@@ -30,7 +30,7 @@ $(document).ready(function() {
 				console.log(data);
 				for (var i = 0; i < data.length; i++) {
 					var cdata = "<div class='secondarySort' data-id='" + data[i].id +
-						"'><div class='img_div'><img class='sortImg' src='img/" + data[i].imgurl +
+						"'><div class='img_div'><img class='sortImg' src='" + data[i].imgurl +
 						"'></div><div class='name_div'><span class='sortName'>" + data[i].secondaryname + "</span></div></div>";
 					$("#right_div").append(cdata);
 				}

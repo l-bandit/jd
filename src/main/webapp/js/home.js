@@ -18,8 +18,8 @@ $(document).ready(function() {
 					alert("没有更多数据");
 				} else {
 					for (var i = 0; i < data.length; i++) {
-						var cdata = "<div class='ranking_div' data-id='" + data[i].id + "'><div class='ranking_img'><img src='img/" + data[i].imgurl +
-							"'></div><div class='ranking_info'><p>名称:" + data[i].name + "</p><p>价格:" + data[i].price + "￥</p><p>销量:" +
+						var cdata = "<div class='ranking_div' data-id='" + data[i].id + "'><div class='ranking_img'><img src='" + data[i].imgurl + "'>" +
+								"</div><div class='ranking_info'><p>名称:" + data[i].name + "</p><p>价格:" + data[i].price + "￥</p><p>销量:" +
 							data[i].salesvolume + "</p></div></div>";
 						$("#ranking_zhong").append(cdata);
 					}
