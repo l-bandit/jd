@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>登录页面</title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div id="body">
+			<div id="top_menu_button">
+				<img id="menu-back" src="img/back.png"/>
+				<p id="menu-help">帮助</p>
+			</div>
+			<div id="logo">
+				<img src="img/logo.jpg"/>
+			</div>
+			<div id="form">
+				<form action="" method="post">
+					<input type="number" class="login_input" name="username" maxlength="11" placeholder="请输入手机号" required="required"/>
+					<input type="text" class="login_input" name="password" maxlength="20" placeholder="请输入密码" required="required" />
+					<br />
+					<button id="login_button">登录</button>
+				</form>
+			</div>
+			<div id="register">
+				<p>短信验证码登录</p>
+				<p>新用户注册</p>
+			</div>
+			<div id="msg">
+				<hr />
+				<p>其他登录方式</p>
+				<hr />
+			</div>
+			<div id="wechatandqqlogin">
+				<div>
+					<img src="img/login-wechatlogin.png" />
+					<p>微信登录</p>
+				</div>
+				<div>
+					<img src="img/login-qqlogin.png" />
+					<p>QQ登录</p>
+				</div>
+			</div>
+			<div id="privacy_msg">
+				<div>登录即代表您已经同意<a href="#">《京东隐私政策》</a></div>
+			</div>
+		</div>
+	</body>
+</html>
