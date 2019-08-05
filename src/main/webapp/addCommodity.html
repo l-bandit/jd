@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>添加商品</title>
+		<link rel="stylesheet" type="text/css" href="css/addCommodity.css" />
+	</head>
+	<body>
+		<!-- 顶部 -->
+		<div id="top">
+			<div id="text">
+				添加商品
+			</div>
+			<div id="top_radius"></div>
+		</div>
+		<div id="tips">
+			请填写商品信息
+		</div>
+		<div id="info">
+			<form method="post" id="infoform" enctype="multipart/form-data">
+				<div>
+					<p>商品图片（第一张为封面）:</p>
+					<div id="photoes">
+						<div id="addFile">
+							<img src="img/square.png">
+							<input type="file" id="add" />
+						</div>
+					</div>
+				</div>
+				<div class="form_div">
+					商品名称：<input type="text" name="" class="form_input" />
+				</div>
+				<div class="form_div">
+					商品描述：<input type="text" name="" class="form_input" />
+				</div>
+				<div class="form_div">
+					商品价格：<input type="number" name="" class="form_input" />
+				</div>
+				<div class="form_div">
+					所属分类：
+					<select name="Sort1">
+						<option value="">选择分类</option>
+					</select>
+				</div>
+				<div class="form_div">
+					<button type="button" id="btn_add">添加</button>
+				</div>
+			</form>
+		</div>
+		<!-- 底部导航 -->
+		<div id="bottom">
+			<div id="bottom_flex">
+				<div>返回</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/home.css" />
+		<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
+	</head>
+	<body>
+		<!-- 顶部 -->
+		<div id="top">
+			<div id="text">
+				<!-- <img src="img/JD_logo.png" width="30px"> -->
+				商城
+			</div>
+			<!-- 搜索框 -->
+			<div id="top_search">
+				<input id="search" type="text" name="" id="" value="" />
+			</div>
+			<!-- 轮播图 -->
+			<div id="carouselMap" onmouseover="stop()" onmouseout="start()">
+				<div id="img1" class="slide"></div>
+				<div id="img2" class="slide"></div>
+				<div id="img3" class="slide"></div>
+			</div>
+		</div>
+		<div id="top_radius">
+		</div>
+		<div id="box_menu">
+			<!-- 圆形菜单 -->
+			<div id="menu">
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png">
+					<p>京东超市</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png">
+					<p>数码电器</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/17169/3/4127/4611/5c2f35cfEd87b0dd5/65c0cdc1362635fc.png">
+					<p>京东服饰</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/27962/13/1445/4620/5c120b24Edd8c34fe/43ea8051bc50d939.png">
+					<p>京东生鲜</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t16990/157/2001547525/17770/a7b93378/5ae01befN2494769f.png">
+					<p>京东到家</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t18454/342/2607665324/6406/273daced/5b03b74eN3541598d.png">
+					<p>充值缴费</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t22228/270/207441984/11564/88140ab7/5b03fae3N67f78fe3.png">
+					<p>9.9元拼</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/7068/29/8987/5605/5c120da2Ecae1cc3a/016033c7ef3e0c6c.png">
+					<p>领券</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t16828/63/2653634926/5662/d18f6fa1/5b03b779N5c0b196f.png">
+					<p>赚钱</p>
+				</div>
+				<div class="menu_div">
+					<img class="menu_img" src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/22262/9/1470/4527/5c120cd0E5d3c6c66/4792ec307a853e9f.png">
+					<p>PLUS会员</p>
+				</div>
+			</div>
+		</div>
+		<div id="box_offer">
+			<!-- 优惠商品 -->
+			<div id="offer">
+				<div id="offer_top">
+					优惠商品
+				</div>
+				<div class="offer_div">
+					<div class="offer_img">
+						<img src="img/images.jpg">
+					</div>
+					<div class="offer_info">
+						<p>名称:华为</p>
+						<p>价格:1000￥</p>
+						<p>销量:9090</p>
+					</div>
+				</div>
+				<div class="offer_div">
+					<div class="offer_img">
+						<img src="img/61hwBSIKJNL._AC_UL200_SR200,200_.jpg">
+					</div>
+					<div class="offer_info">
+						<p>名称:华为</p>
+						<p>价格:1000￥</p>
+						<p>销量:9090</p>
+					</div>
+				</div>
+
+				<div id="offer_bottom">
+					更多
+				</div>
+			</div>
+			<!-- 商品排行 -->
+			<div id="ranking">
+				<div id="ranking_top">
+					热销商品
+				</div>
+				<div id="ranking_zhong">
+					
+				</div>
+				<div id="ranking_bottom">
+					更多
+				</div>
+			</div>
+		</div>
+		<!-- 底部导航 -->
+		<div id="bottom">
+			<div id="bottom_flex">
+				<div>
+					<img src="img/home.png">
+					<p>首页</p>
+				</div>
+				<div id="sort">
+					<img src="img/archive.png">
+					<p>分类</p>
+				</div>
+				<div>
+					<img src="img/chat.png">
+					<p>社区</p>
+				</div>
+				<div>
+					<img src="img/shopping.png">
+					<p>购物车</p>
+				</div>
+				<div>
+					<img src="img/user.png">
+					<p>我的</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

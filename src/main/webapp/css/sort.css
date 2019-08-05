@@ -1,0 +1,100 @@
+body {
+	margin: 0;
+}
+
+input {
+	outline: medium;
+}
+
+#top_search {
+	display: flex;
+	justify-content: center;
+}
+
+#search {
+	margin-top: 14px;
+	height: 36px;
+	width: 300px;
+	border: none;
+	border-radius: 80px;
+	background-image: url(../img/search.png);
+	background-size: 17px 17px;
+	background-position: 15px 10px;
+	background-repeat: no-repeat;
+	padding-left: 38px;
+	background-color: #F2F2F2;
+}
+
+#sort {
+	display: flex;
+	margin-bottom: 60px;
+}
+
+#left_div {
+	margin-top: 20px;
+	width: 26%;
+}
+
+.firstSort {
+	background-color: #F2F2F2;
+	height: 54px;
+	line-height: 54px;
+	text-align: center;
+}
+
+.secondarySort {
+	display: flex;
+	margin-top: 20px;
+	margin-left: 22px;
+	width: 240px;
+	height: 120px;
+	background-color: #F2F2F2;
+	border-radius: 18px;
+}
+
+.secondarySort>div>img {
+	margin-top: 14px;
+	margin-left: 16px;
+	width: 90px;
+	border-radius: 18px;
+}
+
+.name_div {
+	text-align: center;
+	margin-top: 44px;
+	margin-left: 46px;
+	font-size: 18px;
+}
+
+
+
+
+#bottom {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: white;
+}
+
+#bottom_flex {
+	display: flex;
+	height: 58px;
+}
+
+#bottom_flex>div {
+	flex: 1;
+	text-align: center;
+}
+
+#bottom_flex img {
+	margin-top: 6px;
+	width: 30px;
+	height: 30px;
+}
+
+#bottom_flex>div>p {
+	margin: 0;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
