@@ -1,0 +1,57 @@
+*{margin: 0px;padding: 0px;}
+a{text-decoration: none;}
+
+body{
+	margin: 16px 16px 0px 16px;
+}
+
+#top_menu_button{
+	display: flex;
+	justify-content: space-between;
+}
+
+h4{
+	font-size: 18px;
+}
+
+#top_menu_button img{
+	height: 16px;
+}
+
+#form{
+	margin-top: 20px;
+}
+
+input{
+	margin-top: 40px;
+}
+
+.input_text{
+	width: 100%;
+	height: 37px;
+	border: 0px;
+	border-bottom: solid 1px #F0F0F0;
+	outline: none;
+}
+
+#sex_women{
+	margin-left: 80px;
+}
+
+#type_business{
+	margin-left: 30px;
+}
+
+#butt{
+	width: 100%;
+	height: 39px;
+	background-color: #FA1600;
+	outline: none;
+	border: 0px;
+	border-radius: 24px;
+	margin-top: 40px;
+}
+
+#help_msg{
+	margin-top: 10px;
+}
