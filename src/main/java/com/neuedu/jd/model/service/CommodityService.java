@@ -22,5 +22,10 @@ public class CommodityService {
 		map.put("k_pagesize", pagesize);
 		return commodityMapper.selectCommoditySales(map);
 	}
+	
+	public List<Commodity> selectCommodityBySid(int sid) {
+		System.out.println(sid);
+		return commodityMapper.selectCommodityBySid(sid);
+	}
 
 }

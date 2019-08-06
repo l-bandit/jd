@@ -28,8 +28,8 @@ $(document).ready(function() {
 			dataType: 'json',
 			success: function(data) {
 				console.log(data);
-				for (var i = 0; i < data.length; i++) {
-					var cdata = "<div class='secondarySort' data-id='" + data[i].id +
+				for (var i = 0; i < data.length; i++) {					
+					var cdata = "<div class='secondarySort' data-sid='" + data[i].id +
 						"'><div class='img_div'><img class='sortImg' src='" + data[i].imgurl +
 						"'></div><div class='name_div'><span class='sortName'>" + data[i].secondaryname + "</span></div></div>";
 					$("#right_div").append(cdata);
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 	// 点击二级分类进入商品列表
 	$(document).on("click", ".secondarySort", function() {
-		var sort2id = $(this).attr("data-id");
+		var sort2id = $(this).attr("data-sid");
 		location.href = "commodity.html?sort2id=" + sort2id;
 	});
 	

@@ -26,13 +26,13 @@ public class Commodity {
 	//二级分类    外键
 	private int sid;
 	//获取店铺表信息时用的属性
-	private List<Shop> shop;
+	private Shop shop;
 	
 
-	public List<Shop> getShop() {
+	public Shop getShop() {
 		return shop;
 	}
-	public void setShop(List<Shop> shop) {
+	public void setShop(Shop shop) {
 		this.shop = shop;
 	}
 	public int getId() {

@@ -9,7 +9,7 @@ public class Shop {
 	//用户id  外键
 	private int uid;
 	//店铺名称
-	private String name;
+	private String shopname;
 	
 	public int getId() {
 		return id;
@@ -23,11 +23,11 @@ public class Shop {
 	public void setUid(int uid) {
 		this.uid = uid;
 	}
-	public String getName() {
-		return name;
+	public String getShopname() {
+		return shopname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setShopname(String shopname) {
+		this.shopname = shopname;
 	}
-	
+		
 }

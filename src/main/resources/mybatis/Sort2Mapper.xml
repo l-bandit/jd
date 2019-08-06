@@ -5,10 +5,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.neuedu.jd.model.mapper.Sort2Mapper">
 
 	<select id="selectSecondaryClassification" parameterType="int" resultType="SecondaryClassification">
-		select *
-		from primaryclassification p, secondaryclassification s
-		where p.id = s.fid
-		and s.fid = #{sort1id};
+		select s.*
+		from  secondaryclassification s
+		where s.fid = #{sort1id};
 	</select>
 
 </mapper>
