@@ -24,14 +24,23 @@ body {
 
 #search {
 	height: 36px;
-	width: 280px;
+	width: 230px;
 	border: none;
 	border-radius: 80px;
 	background-image: url(../img/top-search.png);
 	background-size: 17px 17px;
 	background-position: 15px 10px;
 	background-repeat: no-repeat;
-	padding-left: 38px;
+	background-color: #F2F2F2;
+	padding-left: 45px;
+}
+
+#search_btn{
+	margin-left: 6px;
+	border-radius: 10px;
+	width: 50px;
+	border: none;
+	outline: medium;
 }
 
 #mid{

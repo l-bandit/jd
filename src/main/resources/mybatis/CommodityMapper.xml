@@ -51,4 +51,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="shopname" column="shopname"/>
 	</resultMap>
 
+	<!-- 上方查询功能，根据商品名称模糊查询 -->
+	<select id="selectCommodityByName" parameterType="string" resultMap="commodityResult">
+		select *
+		from commodity c,shop s
+		where c.shopid=s.id
+		and c.name like #{name}
+	</select>
+	
+
 </mapper>

@@ -37,14 +37,24 @@ input {
 #search {
 	margin-top: 14px;
 	height: 36px;
-	width: 300px;
+	width: 250px;
 	border: none;
 	border-radius: 80px;
 	background-image: url(../img/top-search.png);
 	background-size: 17px 17px;
 	background-position: 15px 10px;
 	background-repeat: no-repeat;
-	padding-left: 38px;
+	background-color: #F2F2F2;
+	padding-left: 45px;	
+}
+
+#search_btn{
+	margin-top: 14px;
+	margin-left: 6px;
+	border-radius: 10px;
+	width: 50px;
+	border: none;
+	outline: medium;
 }
 
 #carouselMap {

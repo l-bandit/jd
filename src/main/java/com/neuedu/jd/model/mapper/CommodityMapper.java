@@ -19,4 +19,7 @@ public interface CommodityMapper {
 	//根据二级商品id查询三级商品返回list（价格排序，price排序）	
 	public List<Commodity> selectCommodityBySidAndPrice(int sid);
 	
+	//上方查询功能，根据商品名称模糊查询
+	public List<Commodity> selectCommodityByName(String name);
+	
 }

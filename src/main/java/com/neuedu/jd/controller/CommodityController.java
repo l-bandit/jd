@@ -45,5 +45,12 @@ public class CommodityController {
 	public List<Commodity> selectCommodityBySidAndPrice(@PathVariable int sid) {
 		return commodityService.selectCommodityBySidAndPrice(sid);		
 	}
+	
+	//上方查询功能，根据商品名称模糊查询
+	@RequestMapping("selectCommodityByName/{name}")
+	@ResponseBody
+	public List<Commodity> selectCommodityByName(@PathVariable String name) {
+		return commodityService.selectCommodityByName(name);		
+	}
 
 }
