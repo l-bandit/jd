@@ -7,10 +7,16 @@ import com.neuedu.jd.model.bean.Commodity;
 
 public interface CommodityMapper {
 
-	// 查询一级分类
+	//首页面分页查询
 	public List<Commodity> selectCommoditySales(Map<String, Object> map);
 	
-	//查询三级商品列表
+	//初始化：根据二级商品id查询三级商品返回list（综合排序，id排序）
 	public List<Commodity> selectCommodityBySid(int sid);
+	
+	//根据二级商品id查询三级商品返回list（销量排序，salesvolume排序）
+	public List<Commodity> selectCommodityBySidAndSales(int sid);
+	
+	//根据二级商品id查询三级商品返回list（价格排序，price排序）	
+	public List<Commodity> selectCommodityBySidAndPrice(int sid);
 	
 }

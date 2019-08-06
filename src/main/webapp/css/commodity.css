@@ -34,6 +34,10 @@ body {
 	padding-left: 38px;
 }
 
+#mid{
+	margin-bottom: 60px;
+}
+
 #bottom {
 	position: fixed;
 	bottom: 0px;

@@ -3,7 +3,8 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neuedu.jd.model.mapper.CommodityMapper">
-
+	
+	<!-- 首页面分页查询 -->
 	<select id="selectCommoditySales" parameterType="map" resultType="Commodity">
 		select *
 		from commodity
@@ -11,20 +12,35 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		limit #{k_beginIndex},#{k_pagesize}
 	</select>
 	
+	<!-- 初始化：根据二级商品id查询三级商品返回list（综合排序，id排序） -->
 	<select id="selectCommodityBySid" parameterType="int" resultMap="commodityResult">
 		select *
 		from commodity c,shop s
 		where c.shopid=s.id
 		and sid = #{sid}
-		order by c.id asc
+		order by c.id
+	</select>
+	<!-- 根据二级商品id查询三级商品返回list（销量排序，salesvolume排序） -->
+	<select id="selectCommodityBySidAndSales" parameterType="int" resultMap="commodityResult">
+		select *
+		from commodity c,shop s
+		where c.shopid=s.id
+		and sid = #{sid}
+		order by c.salesvolume desc
+	</select>
+	<!-- 根据二级商品id查询三级商品返回list（价格排序，price排序） -->	
+	<select id="selectCommodityBySidAndPrice" parameterType="int" resultMap="commodityResult">
+		select *
+		from commodity c,shop s
+		where c.shopid=s.id
+		and sid = #{sid}
+		order by c.price desc
 	</select>
 	<resultMap type="Commodity" id="commodityResult">
 		<result property="id" column="id"/>
 		<result property="name" column="name"/>
 		<result property="price" column="price"/>
-		<result property="description" column="description"/>
 		<result property="imgurl" column="imgurl"/>
-		<result property="imgsrc" column="imgsrc"/>
 		<result property="commentcount" column="commentcount"/>
 		<result property="salesvolume" column="salesvolume"/>
 		<result property="sid" column="sid"/>
@@ -32,7 +48,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	<resultMap type="Shop" id="shopResult">
 		<result property="id" column="id"/>
-		<result property="uid" column="uid"/>
 		<result property="shopname" column="shopname"/>
 	</resultMap>
 
