@@ -34,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from commodity c,shop s
 		where c.shopid=s.id
 		and sid = #{sid}
-		order by c.price desc
+		order by c.price
 	</select>
 	<resultMap type="Commodity" id="commodityResult">
 		<result property="id" column="id"/>

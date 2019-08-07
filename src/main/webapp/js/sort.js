@@ -44,9 +44,21 @@ $(document).ready(function() {
 		location.href = "commodity.html?sort2id=" + sort2id;
 	});
 	
-	// 主页
-	$("#home").click(function() {
-		window.location.href = "home.html";
+	//下方导航栏页面跳转功能
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#sort").click(function(){
+		location.href="sort.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
 	})
 
 })

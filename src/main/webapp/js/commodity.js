@@ -5,6 +5,8 @@ $(document).ready(function(){
 	
 	//初始化：根据二级商品id查询三级商品返回list（综合排序，id排序）	
 	var multiple = 0;
+	var sale = 0;
+	var price = 0;
 	$.ajax({
 		url: 'selectCommodityBySid/' + sid,
 		type: 'post',
@@ -29,8 +31,8 @@ $(document).ready(function(){
 	});	
 	//点击综合重新排序（综合排序，id排序）
 	$("#order_multiple").click(function(){
-		var sale = 0;
-		var price = 0;
+		sale = 0;
+		price = 0;
 		if(multiple==0){
 			$(".commodity").remove();
 			$.ajax({
@@ -82,11 +84,10 @@ $(document).ready(function(){
 		}
 	})
 
-	//根据二级商品id查询三级商品返回list（销量排序，salesvolume排序）
-	var sale = 0;
+	//根据二级商品id查询三级商品返回list（销量排序，salesvolume排序）	
 	$("#order_sale").click(function(){
-		var multiple = 0;
-		var price = 0;
+		multiple = 0;
+		price = 0;
 		if(sale==0){
 			$(".commodity").remove();
 			$.ajax({
@@ -138,11 +139,10 @@ $(document).ready(function(){
 		}
 	})
 	
-	//根据二级商品id查询三级商品返回list（价格排序，price排序）	
-	var price = 0;
+	//根据二级商品id查询三级商品返回list（价格排序，price排序）		
 	$("#order_price").click(function(){
-		var multiple = 0;
-		var sale = 0;
+		multiple = 0;
+		sale = 0;
 		if(price==0){
 			$(".commodity").remove();
 			$.ajax({
@@ -226,10 +226,26 @@ $(document).ready(function(){
 		
 	})
 	
-	
-	
-	
-	
+	//上方返回功能
+	$("#top_return").click(function(){
+		history.back();
+	})
+	//下方导航栏页面跳转功能
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#sort").click(function(){
+		location.href="sort.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
 	
 	
 	

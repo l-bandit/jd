@@ -24,26 +24,22 @@ body {
 
 #search {
 	height: 36px;
-	width: 230px;
+	width: 280px;
 	border: none;
 	border-radius: 80px;
-	background-image: url(../img/top-search.png);
-	background-size: 17px 17px;
-	background-position: 15px 10px;
-	background-repeat: no-repeat;
-	background-color: #F2F2F2;
+	background-color: white;
 	padding-left: 45px;
 }
 
-#search_btn{
-	margin-left: 6px;
-	border-radius: 10px;
-	width: 50px;
-	border: none;
-	outline: medium;
+#top_search>img {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	left: 55px;
+	top: 25px;
 }
 
-#mid{
+#mid {
 	margin-bottom: 60px;
 }
 

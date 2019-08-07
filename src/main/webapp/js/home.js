@@ -39,10 +39,22 @@ $(document).ready(function() {
 		location.href = "页面.html?salesId=" + salesId;
 	});
 
-	// 分类
-	$("#sort").click(function() {
-		window.location.href = "sort.html";
-	});
+	//下方导航栏页面跳转功能
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#sort").click(function(){
+		location.href="sort.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#home").click(function(){
+		location.href="home.html";
+	})
 
 })
 
