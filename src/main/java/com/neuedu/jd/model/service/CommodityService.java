@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.neuedu.jd.model.bean.Commodity;
 import com.neuedu.jd.model.mapper.CommodityMapper;
@@ -42,6 +43,11 @@ public class CommodityService {
 	//上方查询功能，根据商品名称模糊查询
 	public List<Commodity> selectCommodityByName(String name) {
 		return commodityMapper.selectCommodityByName("%"+name+"%");
+	}
+	
+	//初始化：根据传入的三级商品cid，查询三级商品表信息
+	public Commodity selectCommodityByCid(int id) {
+		return commodityMapper.selectCommodityByCid(id);
 	}
 
 }

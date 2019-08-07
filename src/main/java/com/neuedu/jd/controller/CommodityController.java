@@ -52,5 +52,12 @@ public class CommodityController {
 	public List<Commodity> selectCommodityByName(@PathVariable String name) {
 		return commodityService.selectCommodityByName(name);		
 	}
+	
+	//初始化：根据传入的三级商品cid，查询三级商品表信息
+	@RequestMapping("selectCommodityByCid/{id}")
+	@ResponseBody
+	public Commodity selectCommodityByCid(@PathVariable int id) {
+		return commodityService.selectCommodityByCid(id);
+	}
 
 }

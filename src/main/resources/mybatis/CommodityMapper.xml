@@ -59,5 +59,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		and c.name like #{name}
 	</select>
 	
+	<!-- 初始化：根据传入的三级商品cid，查询三级商品表信息 -->
+	<select id="selectCommodityByCid" parameterType="int" resultType="Commodity">
+		select *
+		from commodity
+		where id=#{id}
+	</select>
 
 </mapper>

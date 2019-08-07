@@ -22,4 +22,9 @@ public interface CommodityMapper {
 	//上方查询功能，根据商品名称模糊查询
 	public List<Commodity> selectCommodityByName(String name);
 	
+	//初始化：根据传入的三级商品cid，查询三级商品表信息
+	public Commodity selectCommodityByCid(int id);
+	
+	
+	
 }
