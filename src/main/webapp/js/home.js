@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	//创建
+	sessionStorage.uid="1";
 
 	// 查询热销商品
 	var pagesize = 2;

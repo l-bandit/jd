@@ -27,8 +27,31 @@ public class Commodity {
 	private int sid;
 	//获取店铺表信息时用的属性
 	private Shop shop;
-	
+	//获取用户表信息时用的属性
+	private User user;
+	//获取颜色表信息时用的属性
+	private List<Color> color;
+	//获取型号表信息时用的属性
+	private List<Size> size;
 
+	public List<Color> getColor() {
+		return color;
+	}
+	public void setColor(List<Color> color) {
+		this.color = color;
+	}
+	public List<Size> getSize() {
+		return size;
+	}
+	public void setSize(List<Size> size) {
+		this.size = size;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	public Shop getShop() {
 		return shop;
 	}

@@ -29,7 +29,7 @@ input {
 	top: 25px;
 }
 
-#sort {
+#level {
 	display: flex;
 	margin-bottom: 60px;
 }
@@ -69,9 +69,6 @@ input {
 	margin-left: 46px;
 	font-size: 18px;
 }
-
-
-
 
 #bottom {
 	position: fixed;

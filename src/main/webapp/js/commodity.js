@@ -15,7 +15,7 @@ $(document).ready(function(){
 		success: function(data) {
 			console.log(data);
 			for(var i=0;i<data.length;i++){
-				var cdata = "<div class='commodity'>" +
+				var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 								"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 								"<div class='commodity_right'>" + 
 									"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -43,7 +43,7 @@ $(document).ready(function(){
 				success: function(data) {
 					console.log(data);
 					for(var i=0;i<data.length;i++){
-						var cdata = "<div class='commodity'>" +
+						var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 										"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 										"<div class='commodity_right'>" + 
 											"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -67,7 +67,7 @@ $(document).ready(function(){
 				success: function(data) {
 					console.log(data);
 					for(var i=0;i<data.length;i++){
-						var cdata = "<div class='commodity'>" +
+						var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 										"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 										"<div class='commodity_right'>" + 
 											"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -98,7 +98,7 @@ $(document).ready(function(){
 				success: function(data) {
 					console.log(data);
 					for(var i=0;i<data.length;i++){
-						var cdata = "<div class='commodity'>" +
+						var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 										"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 										"<div class='commodity_right'>" + 
 											"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -122,7 +122,7 @@ $(document).ready(function(){
 				success: function(data) {
 					console.log(data);
 					for(var i=0;i<data.length;i++){
-						var cdata = "<div class='commodity'>" +
+						var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 										"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 										"<div class='commodity_right'>" + 
 											"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -153,7 +153,7 @@ $(document).ready(function(){
 				success: function(data) {
 					console.log(data);
 					for(var i=0;i<data.length;i++){
-						var cdata = "<div class='commodity'>" +
+						var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 										"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 										"<div class='commodity_right'>" + 
 											"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -177,7 +177,7 @@ $(document).ready(function(){
 				success: function(data) {
 					console.log(data);
 					for(var i=0;i<data.length;i++){
-						var cdata = "<div class='commodity'>" +
+						var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 										"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 										"<div class='commodity_right'>" + 
 											"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -209,7 +209,7 @@ $(document).ready(function(){
 					console.log(data);
 					$("#mid").empty();
 					for(var i=0;i<data.length;i++){
-						var cdata = "<div class='commodity'>" +
+						var cdata = "<div class='commodity' data-id='"+data[i].id+"'>" +
 										"<div class='commodity_left'>" + "<img src='"+data[i].imgurl+"' />" + "</div>" + 
 										"<div class='commodity_right'>" + 
 											"<div class='commodity_name'>"+data[i].name+"</div>" +
@@ -224,6 +224,12 @@ $(document).ready(function(){
 			});	
 		}
 		
+	})
+	
+	//追加出的商品元素，点击div进入商品信息界面，传入三级商品cid
+	$(document).on("click",".commodity",function(){
+		var cid = $(this).attr("data-id");
+		location.href="product.html?cid="+cid;
 	})
 	
 	//上方返回功能
@@ -245,14 +251,6 @@ $(document).ready(function(){
 	})
 	$("#home").click(function(){
 		location.href="home.html";
-	})
-	
-	
-	
-	
-	
-	
-	
-	
+	})	
 	
 })
