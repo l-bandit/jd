@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.jd.model.mapper.CollectionsMapper">
+
+	<!-- 点击收藏按钮后，在商品收藏表上传一条数据，传入用户uid、商品cid、当前系统时间 -->
+	<insert id="insertCollections" parameterType="Collections">
+		insert into collections(uid,cid,time)
+		values (#{uid},#{cid},#{time})
+	</insert>
+
+</mapper>
