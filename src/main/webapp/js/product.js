@@ -169,5 +169,12 @@ $(document).ready(function(){
 	$("#top_return").click(function(){
 		history.back();
 	})
+	//上方页面切换
+	$("#detail").click(function(){
+		location.replace("detail.html?cid="+cid);
+	})
+	$("#evaluation").click(function(){
+		location.replace("evaluation.html?cid="+cid);
+	})
 	
 })

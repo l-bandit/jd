@@ -15,7 +15,15 @@ public class Evaluation {
 	private String content;
 	//评价时间
 	private Timestamp time;
+	//获取用户表信息时用的属性
+	private User user;
 	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	public int getId() {
 		return id;
 	}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.jd.model.mapper.EvaluationMapper">
+
+	<!-- 初始化：根据传入的三级商品cid，查询评价表用户uid、内容、时间（年月日），多表查询带回用户表数据 -->
+	<select id="selectEvaluationByCid" parameterType="int" resultMap="evaluationResult">
+		select *
+		from evaluation e,user u
+		where e.uid=u.id
+		and cid=#{cid}
+	</select>
+	<resultMap type="Evaluation" id="evaluationResult">
+		<result property="id" column="id"/>
+		<result property="cid" column="cid"/>
+		<result property="uid" column="uid"/>
+		<result property="content" column="content"/>
+		<result property="time" column="time"/>
+		<association property="user" column="uid" javaType="User" resultMap="userResult"></association>
+	</resultMap>
+	<resultMap type="User" id="userResult">
+		<result property="name" column="name"/>
+	</resultMap>
+
+</mapper>

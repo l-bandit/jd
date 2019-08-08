@@ -32,7 +32,7 @@ body {
 	line-height: 40px;
 }
 
-#top_red{
+.top_red{
 	color: red;
 }
 
@@ -54,6 +54,7 @@ body {
 }
 
 .mid_date{
+	margin-top: 18px;
 	position: absolute;
 	right: 10px;
 	color: #999999;
@@ -131,5 +132,148 @@ body {
 }
 
 #right_buy{
+	background-color: red;
+}
+
+#slide{
+	display: none;
+	width: 100%;
+	padding: 10px;
+	position: fixed;
+	bottom: 0px;	
+	background-color: white;
+	box-sizing: border-box;
+}
+
+#slide span{
+	color: #999999;
+}
+
+.slide_title{
+	display: flex;
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid lightgray;
+}
+
+.slide_left{
+	width: 30%;
+	text-align: center;
+}
+
+.slide_left>img{
+	width: 90px;
+	height: 90px;
+}
+
+.slide_right{
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.slide_right>div{
+	width: 100%;
+	height: 50%;
+}
+
+.slide_price,.slide_name{
+	display: flex;
+	align-items: center;
+}
+
+.slide_price{
+	font: normal bold 14px "微软雅黑";
+	color: red;
+}
+
+#slide_close{
+	width: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.slide_price>span{
+	font-size: 18px;
+	color: red !important;
+}
+
+.slide_name{
+	font: normal 400 14px "微软雅黑";
+}
+
+.slide_body>div{
+	margin: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lightgray;
+}
+
+.slide_colorlist,.slide_sizelist{
+	display: flex;
+}
+
+.size,.color{
+	margin: 5px;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #c3c3c3;
+	color: black;
+	border-radius: 5px;
+}
+
+#default{
+	color: white;
+	background-color: red ;
+}
+
+.slide_number{
+	display: flex;
+	padding-bottom: 20px !important;
+}
+
+.slide_numberlist{
+	display: flex;
+	position: absolute;
+	right: 20px;
+}
+
+.slide_numberlist img{
+	width: 30px;
+	height: 30px;
+}
+
+.slide_numberlist input{
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	outline: none;
+	width: 50px;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+}
+
+#slide_bottom{
+	margin-top: 10px;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	text-align: center;
+	color: white;
+}
+
+#slide_bottom>div{
+	flex: 1;	
+	line-height: 50px;
+}
+
+#slide_car{
+	background-color: orange;
+}
+
+#slide_buy{
 	background-color: red;
 }
