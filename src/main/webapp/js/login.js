@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+
 	//登录，并往html5作用域储存用户id
 	var uid = 0;
 	$(document).on("click","#login_button",function(){

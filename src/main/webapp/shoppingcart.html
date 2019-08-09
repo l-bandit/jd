@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>购物车</title>
+		<link rel="stylesheet" href="css/shoppingcart.css" />
+		<link rel="stylesheet" href="css/bottom.css" />
+	</head>
+	<body>
+		<div id="title">
+			<p></p>
+			<h4>购物车</h4>
+			<img src="img/menu.png" />
+		</div>
+		<form id="commodity_data" action="" method="post">
+			<div id="commodity_data_div">
+				<div class="shop_box">
+					<p class="shop">京东自营</p>
+					<div class="commodity_flex">
+						<div class="commodity_checkbox">
+							<input type="checkbox" name="comm" value="" />
+						</div>
+						<div>
+							<img class="image" src="img/comm-iphone.jpg" />
+						</div>
+						<div>
+							<p class="name">名字</p>
+							<p class="details">商品详情详情详情</p>
+							￥<span>39.90</span>
+							<span class="count">
+								<span class="minus">-</span>
+								<input type="number" class="count_input" name="count" value="1" />
+								<span class="plus">+</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="settlement">
+			<input type="checkbox" name="comm" value="" />
+			&nbsp;
+			全选
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			合计：￥<span id="price">39.90</span>
+			<button type="button" id="butt">去结算</button>
+		</div>
+		</form>
+		
+		<!-- 底部导航 -->
+		<div id="bottom">
+			<div id="bottom_flex">
+				<div id="home">
+					<img src="img/bottom-home.png">
+					<p>首页</p>
+				</div>
+				<div id="sort">
+					<img src="img/bottom-archive.png">
+					<p>分类</p>
+				</div>
+				<div id="community">
+					<img src="img/bottom-chat.png">
+					<p>社区</p>
+				</div>
+				<div id="shoppingcart">
+					<img src="img/bottom-shopping.png">
+					<p>购物车</p>
+				</div>
+				<div id="my">
+					<img src="img/bottom-user.png">
+					<p>我的</p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

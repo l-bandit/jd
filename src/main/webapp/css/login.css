@@ -1,5 +1,5 @@
 *{margin: 0px;padding: 0px;}
-a{text-decoration: none;}
+a{text-decoration: none; color: black;}
 
 #body{
 	margin: 0px 16px;
@@ -70,3 +70,4 @@ a{text-decoration: none;}
 	text-align: center;
 	margin-top: 18px;
 }
+
