@@ -1,0 +1,97 @@
+*{margin: 0px;padding: 0px;}
+a{text-decoration: none;}
+
+#personalinfo{
+	padding: 0px 16px;
+	border-bottom: dashed 4px #797979;
+	border-radius: 16px;
+}
+
+#menu_top{
+	display: flex;
+	height: 45px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#menu_top h4{
+	font-size: 18px;
+}
+
+#address{
+	height: 45px;
+	line-height: 45px;
+	padding-left: 16px;
+	display: flex;
+}
+
+#nameandphone{
+	display: flex;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 16px;
+}
+
+/*#paymentmethod{
+	padding: 0px 16px;
+	height: 48px;
+	line-height: 48px;
+	border: solid 1px #797979;
+	border-radius: 16px;
+	margin: 20px 0px;
+}
+
+#paymentmethod select{
+	width: 94px;
+	height: 22px;
+	margin-left: 178px;
+	outline: none;
+}*/
+
+
+
+.shop_box{
+	margin: 16px 0px;
+	padding: 0px 16px;
+	border: solid 1px #797979;
+	border-radius: 10px;
+	height: 216px;
+}
+
+.shop{
+	height: 42px;
+	line-height: 42px;
+	padding-left: 24px;
+}
+
+.commodity_flex{
+	display: flex;
+	align-items: center;
+}
+
+.commodity_flex img{
+	width: 86px;
+	height: 86px;
+	margin: 0px 10px;
+}
+
+.count_input{
+	width: 28px;
+}
+
+.count{
+	padding-left: 99px;
+	
+}
+
+.delivery{
+	margin: 20px 0px;
+}
+
+.delivery_2{
+	margin-left: 224px;
+}
+
+.delivery_3{
+	margin-left: 150px;
+}

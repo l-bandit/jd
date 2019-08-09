@@ -1,0 +1,112 @@
+*{margin: 0px;padding: 0px;}
+a{text-decoration: none;}
+
+body{
+	background-color: #F2F2F2;
+}
+
+#shop_infoandselect{
+	padding: 16px 16px 0px 16px;
+	height: 148px;
+	border-bottom: solid 1px black;
+	background-color: white;
+}
+
+#shop_info{
+	height: 90px;
+	display: flex;
+	align-items: flex-start;
+}
+
+#shop_info img{
+	width: 64px;
+	height: 64px;
+}
+
+#shop_info p{
+	padding:20px 0px 0px 20px ;
+}
+
+#shop_form input{
+	width: 251px;
+	height: 25px;
+	outline: none;
+	border: 0px;
+	border: solid 1px #797979;
+}
+
+#shop_form button{
+	width: 82px;
+	height: 25px;
+	outline: none;
+	border-radius: 16px;
+	border: 0px;
+	background-color: red;
+	color: white;
+}
+
+#content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.comm_info{
+	width: 165px;
+	height: 216px;
+	border: solid 1px #797979;
+	border-radius: 8px;
+	margin-top: 14px;
+	background-color: white;
+}
+
+.img_info{
+	text-align: center;
+}
+
+.img_info img{
+	width: 145px;
+	height: 145px;
+	margin-top: 10px;
+}
+
+.comm_name{
+	text-align: center;
+}
+
+.priceandbuy{
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 10px;
+}
+
+.price{
+	color: red;
+}
+
+.buy{
+	background-color: red;
+	outline: none;
+	border: 0px;
+	border-radius: 16px;
+	color: white;
+	width: 58px;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#back_bottom{
+	height: 45px;
+	background-color: white;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+	line-height: 45px;
+	border-top: solid 1px black;
+}
+
+
