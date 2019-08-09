@@ -4,6 +4,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neuedu.jd.model.mapper.UserMapper">
 
+	<!-- 登录功能，并返回该用户的信息 -->
+	<select id="login" parameterType="User" resultType="User">
+		select * 
+		from user 
+		where username=#{username} and password=#{password}
+	</select>	
+	
+	<!-- 注册校验  -->
+	<select id="check" parameterType="User" resultType="User">
+		select * from user where username=#{username}
+	</select>	
+	
+	<!-- 注册功能  -->
+	<insert id="register" parameterType="User">
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			select max(id)+1 from user
+		</selectKey>
+		insert into user(username,password,sex,category,time) values(#{username},#{password},#{sex},#{category},#{time})
+	</insert>
+
 	<!-- 初始化：根据获取的用户uid，查询用户表地址 -->
 	<select id="selectUserByUid" parameterType="int" resultType="user">
 		select address
