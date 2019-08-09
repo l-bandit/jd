@@ -12,9 +12,12 @@ body {
 
 #top_return{
 	width: 10%;
-	font-size:28px;
-	font-weight: bolder;
 	text-align: center;
+}
+
+#return{
+	width: 20px;
+	height: 20px;
 }
 
 #top_search {

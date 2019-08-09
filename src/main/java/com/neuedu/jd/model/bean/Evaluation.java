@@ -1,6 +1,6 @@
 package com.neuedu.jd.model.bean;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 /**商品评价表*/
 public class Evaluation {
@@ -14,7 +14,7 @@ public class Evaluation {
 	//评价内容
 	private String content;
 	//评价时间
-	private Timestamp time;
+	private Date time;
 	//获取用户表信息时用的属性
 	private User user;
 	
@@ -48,10 +48,10 @@ public class Evaluation {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Timestamp getTime() {
+	public Date getTime() {
 		return time;
 	}
-	public void setTime(Timestamp time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 	

@@ -44,6 +44,11 @@ $(document).ready(function() {
 		location.href = "commodity.html?sort2id=" + sort2id;
 	});
 	
+	//上方返回功能
+	$("#return").click(function(){
+		history.back();
+	})
+	
 	//下方导航栏页面跳转功能
 	$("#home").click(function(){
 		location.href="home.html";

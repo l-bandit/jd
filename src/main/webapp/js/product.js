@@ -192,5 +192,12 @@ $(document).ready(function(){
 	$("#evaluation").click(function(){
 		location.replace("evaluation.html?cid="+cid);
 	})
+	//下方页面切换
+	$("#left_shop").click(function(){
+		location.href="shop.html";
+	})
+	$("#left_shoppingcart").click(function(){
+		location.href="shoppingcart.html";
+	})
 	
 })

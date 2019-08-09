@@ -17,6 +17,11 @@ a{text-decoration: none;}
 	height: 6px;
 }
 
+#return{
+	width: 20px !important;
+	height: 20px !important;
+}
+
 #commodity_data{
 	margin-top: 8px;
 }
@@ -83,5 +88,36 @@ a{text-decoration: none;}
 
 #price{
 	font-weight: bold;
+}
+
+#bottom {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: white;
+	border-top: solid 1px #797979;
+}
+
+#bottom_flex {
+	display: flex;
+	height: 58px;
+}
+
+#bottom_flex>div {
+	flex: 1;
+	text-align: center;
+}
+
+#bottom_flex img {
+	margin-top: 6px;
+	width: 30px;
+	height: 30px;
+}
+
+#bottom_flex>div>p {
+	margin: 0;
+	font-size: 12px;
+	margin-bottom: 10px;
 }
 

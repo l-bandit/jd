@@ -21,7 +21,7 @@ $(document).ready(function() {
 				} else {
 					for (var i = 0; i < data.length; i++) {
 						var cdata = "<div class='ranking_div' data-id='" + data[i].id + "'><div class='ranking_img'><img src='" + data[i].imgurl + "'>" +
-								"</div><div class='ranking_info'><p>名称:" + data[i].name + "</p><p>价格:" + data[i].price + "￥</p><p>销量:" +
+								"</div><div class='ranking_info'><p>名称:" + data[i].name + "</p><p>价格:￥" + data[i].price + "</p><p>销量:" +
 							data[i].salesvolume + "</p></div></div>";
 						$("#ranking_zhong").append(cdata);
 					}
@@ -37,8 +37,8 @@ $(document).ready(function() {
 	
 	// 点击销量商品进入详情
 	$(document).on("click", ".ranking_div", function() {
-		var salesId = $(this).attr("data-id");
-		location.href = "页面.html?salesId=" + salesId;
+		var cid = $(this).attr("data-id");
+		location.href = "product.html?cid=" + cid;
 	});
 
 	//下方导航栏页面跳转功能

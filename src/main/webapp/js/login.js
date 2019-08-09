@@ -12,6 +12,7 @@ $(document).ready(function(){
 				uid = data.id;
 
 				if(uid!=undefined){
+					alert("登录成功");
 					sessionStorage.uid = uid;
 					location.href = "home.html";
 				}

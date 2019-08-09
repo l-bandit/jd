@@ -15,6 +15,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from collections co, commodity c
 		where  co.cid = c.id
 		and co.uid = #{k_uid}
+		group by co.cid
 		limit #{k_beginIndex},#{k_pagesize}
 	</select>
 	

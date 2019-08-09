@@ -30,11 +30,25 @@ $(document).ready(function(){
 	})
 	$("#index").click(function(){
 		window.location.href="home.html";
-	})
-	$("#my").click(function(){
-		window.location.href="my.html";
-	})
+	})	
     $("#div1").click(function(){
 		window.location.href="changeuser.html"
+	})
+	
+	//下方导航栏页面跳转功能
+	$("#home").click(function(){
+		location.href="home.html";
+	})
+	$("#sort").click(function(){
+		location.href="sort.html";
+	})
+	$("#community").click(function(){
+		location.href="community.html";
+	})
+	$("#shoppingcart").click(function(){
+		location.href="shoppingcart.html";
+	})
+	$("#my").click(function(){
+		location.href="my.html";
 	})
 })

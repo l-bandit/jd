@@ -14,6 +14,7 @@ $(document).ready(function(){
 		data:{},
 		dataType:'json',
 		success:function(data){
+			console.log(data);
 			pagenum++;
 			if(data.length==0){
 				alert("没有更多浏览记录")
