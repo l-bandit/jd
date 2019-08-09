@@ -29,7 +29,7 @@ $(document).ready(function(){
 		async:false,
 		success: function(data) {
 			console.log(data);
-			var cdata = "<div id='mid_head' data-id='"+data.id+"'>" +
+			var cdata = "<div id='mid_head' data-id='"+data.id+"' data-shopid='"+data.shopid+"'>" +
 							"<img src="+data.imgurl+" />" + 
 							"<div id='mid_price'>" +
 								"<div>&yen;<span>"+data.price+"</span>.00</div>" + 
@@ -49,9 +49,10 @@ $(document).ready(function(){
 							"</div>" + 	
 						"</div>";
 			$("#mid").prepend(cdata);
-			$("#slide").prepend(ddata);			
+			$("#slide").prepend(ddata);	
 		}
 	});	
+	var shopid = $("#mid_head").attr("data-shopid");
 	//初始化：根据传入的三级商品cid，查询三级商品尺寸表
 	var sizeid=0;
 	$.ajax({
@@ -123,7 +124,6 @@ $(document).ready(function(){
 			$("#adress").html(data.address);
 		}
 	});	
-	//初始化：根据传入的三级商品cid，查询店铺表id
 	
 	//获取购买商品数量值
 	var count = 1;
