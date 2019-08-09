@@ -5,6 +5,21 @@ $(document).ready(function(){
 	//获取三级商品cid
 	var cid = location.href.substr(location.href.indexOf('=')+1);
 	
+//	//截取路径中?后的内容   ?cid=cid&shopid=shopid
+//	var str = location.href.substr(location.href.indexOf('?')+1)
+//	//分隔   cid=cid&shopid=shopid
+//	var arr = str.split('&');
+//	
+//	var cid
+//	var shopid
+//	for(var i=0;i<arr.length;i++){		
+//		if(arr[i].indexOf('cid')>-1){
+//			cid = arr[i].substr(arr[i].indexOf('=')+1);
+//		}
+//		if(arr[i].indexOf('shopid')>-1){
+//			shopid = arr[i].substr(arr[i].indexOf('=')+1);
+//		}
+//	}
 	//初始化：根据传入的三级商品cid，查询三级商品表信息
 	$.ajax({
 		url: 'selectCommodityByCid/' + cid,
@@ -108,6 +123,7 @@ $(document).ready(function(){
 			$("#adress").html(data.address);
 		}
 	});	
+	//初始化：根据传入的三级商品cid，查询店铺表id
 	
 	//获取购买商品数量值
 	var count = 1;

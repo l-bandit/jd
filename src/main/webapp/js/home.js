@@ -48,15 +48,16 @@ $(document).ready(function() {
 	$("#sort").click(function(){
 		location.href="sort.html";
 	})
-	$("#home").click(function(){
-		location.href="home.html";
+	$("#community").click(function(){
+		location.href="community.html";
 	})
-	$("#home").click(function(){
-		location.href="home.html";
+	$("#shoppingcart").click(function(){
+		location.href="shoppingcart.html";
 	})
-	$("#home").click(function(){
-		location.href="home.html";
+	$("#my").click(function(){
+		location.href="my.html";
 	})
+
 
 })
 

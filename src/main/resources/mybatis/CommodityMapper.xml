@@ -40,7 +40,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="id" column="id"/>
 		<result property="name" column="name"/>
 		<result property="price" column="price"/>
+		<result property="description" column="description"/>
 		<result property="imgurl" column="imgurl"/>
+		<result property="imgsrc" column="imgsrc"/>
 		<result property="commentcount" column="commentcount"/>
 		<result property="salesvolume" column="salesvolume"/>
 		<result property="sid" column="sid"/>
@@ -60,10 +62,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<!-- 初始化：根据传入的三级商品cid，查询三级商品表信息 -->
-	<select id="selectCommodityByCid" parameterType="int" resultType="Commodity">
+	<select id="selectCommodityByCid" parameterType="int" resultType="commodity">
 		select *
 		from commodity
 		where id=#{id}
-	</select>
+	</select>	
 
 </mapper>
