@@ -2,33 +2,13 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.neuedu.jd.model.mapper.EvaluationMapper">
+<mapper namespace="com.neuedu.jd.model.mapper.OrdersMapper">
 
-	<!-- 初始化：根据传入的三级商品cid，查询评价表用户uid、内容、时间（年月日），多表查询带回用户表数据 -->
-	<select id="selectEvaluationByCid" parameterType="int" resultMap="evaluationResult">
-		select *
-		from evaluation e,user u
-		where e.uid=u.id
-		and cid=#{cid}
-	</select>
-	<resultMap type="Evaluation" id="evaluationResult">
-		<result property="id" column="id"/>
-		<result property="cid" column="cid"/>
-		<result property="uid" column="uid"/>
-		<result property="content" column="content"/>
-		<result property="time" column="time"/>
-		<association property="user" column="uid" javaType="User" resultMap="userResult"></association>
-	</resultMap>
-	<resultMap type="User" id="userResult">
-		<result property="name" column="name"/>
-	</resultMap>
-	
-	<select id="selectEvaluation"  parameterType="map"  resultMap="cresult"   >
-		select c.name,c.imgurl,c.description,c.price cprice,c.id
+      <select id="selectOrders"  parameterType="map"  resultMap="cresult"   >
+		select c.name,c.imgurl,c.description,c.price cprice
 		from orders o, commodity c
 		where  o.cid = c.id
 		and o.uid = #{k_uid}
-		and o.evaluatekey=0
 		limit #{k_beginIndex},#{k_pagesize}
 	</select>
 	
@@ -53,5 +33,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<result  property="sid"   column="sid"  />
 		</collection>
 	</resultMap>
-
+       
+       
 </mapper>
+
+

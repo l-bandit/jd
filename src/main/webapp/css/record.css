@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	background-color:#FFFFFF;
+}
+h4{
+	margin-top: -20px;
+	margin-left: 140px;
+}
+#top>img{
+	margin-top: 20px;
+	margin-left: 15px;
+}
+#center{
+	margin-bottom: 60px;
+}
+#more{
+	margin-left: 150px;
+}
+.ii{
+	height: 150px;
+	width: 130px;
+}
+.commodity{
+	width: 100%;
+	height: 130px;
+	margin-top: 2px;
+	display: flex;
+	background-color: white;
+	padding-top: 10px;
+}
+
+.commodity_left{
+	width: 30%;
+	height: 120px;
+}
+
+.commodity_left>img{
+	width: 100%;
+}
+
+.commodity_right{
+	width: 70%;
+	margin-left: 10px;
+}
+
+.commodity_name{
+	height: 40px;
+	font: normal bold 16px "微软雅黑";
+}
+
+.commodity_price{
+	margin-top: 3px;
+	height: 20px;
+	font: normal bold 14px "微软雅黑";
+	color: red;
+}
+
+.commodity_price>span{
+	font-size: 18px;
+}
+
+.commodity_comment{
+	margin-top: 3px;
+	font: normal 100 14px "微软雅黑";
+	color: grey;
+}
+
+.commodity_shop{
+	margin-top: 3px;
+	font: normal 100 14px "微软雅黑";
+	color: grey;
+}

@@ -9,5 +9,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into collections(uid,cid,time)
 		values (#{uid},#{cid},#{time})
 	</insert>
-
+	
+	<select id="selectCollections"  parameterType="map"  resultMap="cresult"   >
+		select c.imgurl,c.price,c.name,c.id
+		from collections co, commodity c
+		where  co.cid = c.id
+		and co.uid = #{k_uid}
+		limit #{k_beginIndex},#{k_pagesize}
+	</select>
+	
+	<resultMap type="Collections" id="cresult">
+		<result  property="id"   column="id"  />
+		<result  property="uid"   column="uid"  />
+		<result  property="cid"   column="cid"  />
+		<result  property="time"   column="time"  />
+		<collection property="commodity" column="cid"  ofType="Commodity"   >
+			<result  property="id"   column="id"  />
+			<result  property="name"   column="name"  />
+			<result  property="price"   column="price"  />
+			<result  property="description"   column="description"  />
+			<result  property="imgurl"   column="imgurl"  />
+			<result  property="imgsrc"   column="imgsrc"  />
+		</collection>
+	</resultMap>
+	
 </mapper>

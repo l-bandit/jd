@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+	background-color:#FFFFFF;
+}
+h4{
+	margin-top: -20px;
+	margin-left: 140px;
+}
+#top>img{
+	margin-top: 20px;
+	margin-left: 15px;
+}
+#all{
+	margin-top: -43px;
+	margin-left: 270px;
+}
+#us{
+	margin: 15px;
+}
+#us>img{
+	border-radius: 50% / 50%;
+	height: 60px;
+	width: 60px;
+}
+#us>p{
+	margin-top: -45px;
+	margin-left: 55px;
+}
+#pro{
+	margin-top: 20px;
+	height: 130px;
+	width: 100%;
+}
+#pro>img{
+	height: 80px;
+	width: 80px;
+	margin-top: 20px;
+}
+#prodes{
+	margin-top: -80px;
+	margin-left: 100px;
+	width: 180px;
+}
+#prom{
+	margin-top: -70px;
+	margin-left: 295px;
+}
+#bt{
+	margin-top: 40px;
+	margin-left: 200px;
+}
+#bt>button{
+	background-color: #FFFFFF;
+	border:solid 1px darkgray;
+}
+#more{
+	margin-top: 20px;
+	margin-left: 250px;
+}

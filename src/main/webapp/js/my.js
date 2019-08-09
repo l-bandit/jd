@@ -1,0 +1,40 @@
+$(document).ready(function(){
+	//获取用户uid
+	var uid = sessionStorage.uid;
+	$.ajax({
+		url:'selectUserById/'+uid,
+		type:'post',
+		data:{},
+		dataType:'json',
+		success:function(data){
+			$("#div1-2").html(data.name);
+		}
+	})
+	$("#div3-1-1").click(function(){
+		location.href="evaluationwait.html"
+	})
+	$("#div3-1-2").click(function(){
+		location.href="order.html?id=1";
+	})
+	$("#div3-1-3").click(function(){
+		location.href="wallet.html"
+	})
+	$("#div2-2").click(function(){
+		location.href="collections.html"
+	})
+	$("#div2-3").click(function(){
+		location.href="record.html"
+	})
+	$("#div2-4").click(function(){
+		location.href="changeuser.html";
+	})
+	$("#index").click(function(){
+		window.location.href="home.html";
+	})
+	$("#my").click(function(){
+		window.location.href="my.html";
+	})
+    $("#div1").click(function(){
+		window.location.href="changeuser.html"
+	})
+})
