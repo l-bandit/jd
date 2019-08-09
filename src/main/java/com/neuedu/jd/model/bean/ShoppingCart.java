@@ -25,9 +25,7 @@ public class ShoppingCart {
 	//获取商品尺码时需要的属性
 	private List<Size> size;
 	//获取商品颜色时需要的属性
-	private List<Color> color;
-	
-	
+	private List<Color> color;	
 	
 	public List<Commodity> getCommodity() {
 		return commodity;

@@ -22,4 +22,19 @@ public class UserController {
 		return userService.selectUserByUid(id);
 	}
 	
+	//更改用户信息
+	@RequestMapping("changeUserById/{id}")
+	@ResponseBody	
+    public void changeUserById(@PathVariable int id,User user){
+        userService.changeUserById(id,user);
+    }
+	
+	//查询用户信息
+	@RequestMapping("selectUserById/{uid}")
+	@ResponseBody	
+	public User selectUserById(@PathVariable int uid){
+		System.out.println("到con");
+		return userService.selectUserById(uid);	
+	}
+	
 }

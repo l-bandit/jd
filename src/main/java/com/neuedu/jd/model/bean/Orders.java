@@ -1,6 +1,7 @@
 package com.neuedu.jd.model.bean;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**订单表*/
 public class Orders {
@@ -19,7 +20,15 @@ public class Orders {
 	private String evaluatekey;
 	//购买时间
 	private Timestamp time;
+	//获取商品表数据时所用属性
+	private List<Commodity> list;
 	
+	public List<Commodity> getList() {
+		return list;
+	}
+	public void setList(List<Commodity> list) {
+		this.list = list;
+	}
 	public int getId() {
 		return id;
 	}
