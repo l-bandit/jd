@@ -21,7 +21,7 @@ $(document).ready(function(){
 									"<div class='commodity_name'>"+data[i].name+"</div>" +
 									"<div class='commodity_price'>"+"&yen;"+"<span>"+data[i].price+"</span>"+".00"+"</div>" +
 									"<div class='commodity_comment'>"+"<span>"+data[i].commentcount+"</span>"+"万+条评价&nbsp;&nbsp;&nbsp;&nbsp;销量"+"<span>"+data[i].salesvolume+"</span>"+"万+"+"</div>" +
-									"<div class='commodity_shop'>"+"<span>"+data[i].shop.shopname+"</span>"+"</div>" +
+									"<div class='commodity_shop' data-shopid='"+data[i].shop.id+"'>"+"<span>"+data[i].shop.shopname+"</span>"+"</div>" +
 								"</div>" +
 							"</div>";
 			$("#mid").append(cdata);
