@@ -15,7 +15,7 @@ $(document).ready(function(){
 		dataType:'json',
 		success:function(data){
 			pagenum++;
-			console.log(data)
+			console.log(data);
 			if(data.length==0){
 				alert("没有更多收藏宝贝")
 			}

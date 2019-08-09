@@ -90,7 +90,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 #order_multiple>div,#order_sale>div,#order_price>div{

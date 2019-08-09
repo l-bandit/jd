@@ -2,8 +2,10 @@ $(document).ready(function(){
 	$("#return").click(function(){
 		window.location.href="my.html";
 	})
+	
 	//获取用户uid
 	var uid = sessionStorage.uid;
+	
 	$.ajax({
 		url:'selectUserById/'+uid,
 		Type:'post',
@@ -16,15 +18,12 @@ $(document).ready(function(){
 			$("#pho").val(data.phone);
 			var username=data.name;
 			$("#username").html(data.name);
-		}
-		
-	})
-	
-	
+		}		
+	})	
 	
 	$("#subbt").click(function(){
 		$.ajax({
-			url:'changeUserById/'+id,
+			url:'changeUserById/'+uid,
 			type:'post',
 			data:$("form").serialize(),
 			dataType:'json',
