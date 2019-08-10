@@ -80,7 +80,6 @@ public class UserService {
 		map.put("k_password", user.getPassword());
 		map.put("k_address", user.getAddress());
 		map.put("k_phone", user.getPhone());
-		System.out.println(user.getUsername());
 		userMapper.changeUserById(map);
 	}
 	

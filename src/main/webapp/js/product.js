@@ -29,7 +29,7 @@ $(document).ready(function(){
 		async:false,
 		success: function(data) {
 			console.log(data);
-			var cdata = "<div id='mid_head' data-id='"+data.id+"' data-shopid='"+data.shopid+"'>" +
+			var cdata = "<div id='mid_head' data-id='"+data.id+"'>" +
 							"<img src="+data.imgurl+" />" + 
 							"<div id='mid_price'>" +
 								"<div>&yen;<span>"+data.price+"</span>.00</div>" + 
@@ -41,7 +41,7 @@ $(document).ready(function(){
 							"<div id='mid_name'><img src='img/product-ZY.png' />"+data.name+"</div>" +
 							"<div id='mid_description'>"+data.description+"</div>" +
 						"</div>";
-			var ddata = "<div class='slide_title' data-id='"+data.id+"'>" +
+			var ddata = "<div class='slide_title' data-id='"+data.id+"' data-shopid='"+data.shopid+"'>" +
 							"<div class='slide_left'><img src='"+data.imgurl+"' /></div>" +
 							"<div class='slide_right'>" +
 								"<div class='slide_price'>&yen;<span>"+data.price+"</span>.00<img id='slide_close' src='img/product-XX.png' /></div>" + 
@@ -52,9 +52,8 @@ $(document).ready(function(){
 			$("#slide").prepend(ddata);	
 		}
 	});	
-	var shopid = $("#mid_head").attr("data-shopid");
+	var shopid = $(".slide_title").attr("data-shopid");
 	//初始化：根据传入的三级商品cid，查询三级商品尺寸表
-	var sizeid=0;
 	$.ajax({
 		url: 'selectSizeByCid/' + cid,
 		type: 'post',
@@ -63,7 +62,7 @@ $(document).ready(function(){
 		async:false,
 		success: function(data) {
 			console.log(data);
-			var cdata = "<div class='size' id='default' data-id='"+data[0].id+"'>"+data[0].size+"</div>"
+			var cdata = "<div class='size' id='default' data-id='"+data[0].id+"'>"+data[0].size+"</div>"			
 			$(".slide_sizelist").append(cdata);
 			for(var i=1;i<data.length;i++){
 				var ddata = "<div class='size' data-id='"+data[i].id+"'>"+data[i].size+"</div>"
@@ -73,6 +72,7 @@ $(document).ready(function(){
 			$("#mid_sizeandcolor").prepend(sizedata);
 		}
 	});	
+	var sizeid = $("#default").attr("data-id");
 	//改变型号样式
 	$(document).on("click",".size",function(){
 		$(".size").css("color","black");
@@ -82,9 +82,8 @@ $(document).ready(function(){
 		$(this).css("background-color","red");
 		$("#mid_size").html($(this).html())
 		$("#count").val("1");
-	})	
+	})
 	//初始化：根据传入的三级商品cid，查询三级商品颜色表
-	var colorid=0;
 	$.ajax({
 		url: 'selectColorByCid/' + cid,
 		type: 'post',
@@ -103,6 +102,7 @@ $(document).ready(function(){
 			$("#mid_sizeandcolor").prepend(colordata);
 		}
 	});	
+	var colorid = $("#default").attr("data-id");
 	//改变颜色样式
 	$(document).on("click",".color",function(){
 		$(".color").css("color","black");
@@ -170,15 +170,43 @@ $(document).ready(function(){
 	//购物车购买动画效果
 	$(document).on("click","#mid_purchase",function(){
 		$("#slide").slideToggle("slow");
-		$("#mid").css("filter","brightness(0.6)");
+		$("#mid").css("filter","brightness(0.4)");
 	})
 	$("#bottom_right").click(function(){
 		$("#slide").slideToggle("slow");
-		$("#mid").css("filter","brightness(0.6)");
+		$("#mid").css("filter","brightness(0.4)");
 	})
 	$(document).on("click","#slide_close",function(){
 		$("#slide").slideToggle("slow");
 		$("#mid").css("filter","none");
+	})	
+	//购物车动画效果，在购物车表上传一条数据，传入用户uid、商品cid、型号sizeid、颜色colorid、购买数量count、当前系统时间
+	$("#slide_car").click(function(){
+		$("#shoppingcart").fadeToggle(1500);
+		$("#shoppingcart").fadeToggle(1500);
+		$.ajax({
+			url: 'insertShoppingCart/'+uid+'/'+cid+'/'+sizeid+'/'+colorid+'/'+count,
+			type: 'post',
+			data: {},
+			dataType: 'json',
+			success: function(data) {
+				console.log(data);				
+			}
+		});
+	})
+	//购买动画效果，在订单表上传一条数据，传入用户uid、商品cid、购买数量count、是否已评价、当前系统时间
+	$("#slide_buy").click(function(){
+		$("#purchase").fadeToggle(1500);
+		$("#purchase").fadeToggle(1500);
+		$.ajax({
+			url: 'insertOrders/'+uid+'/'+cid+'/'+count,
+			type: 'post',
+			data: {},
+			dataType: 'json',
+			success: function(data) {
+				console.log(data);				
+			}
+		});
 	})
 	
 	//上方返回功能
@@ -194,7 +222,7 @@ $(document).ready(function(){
 	})
 	//下方页面切换
 	$("#left_shop").click(function(){
-		location.href="shop.html";
+		location.href="shop.html?shopid="+shopid;
 	})
 	$("#left_shoppingcart").click(function(){
 		location.href="shoppingcart.html";

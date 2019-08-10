@@ -36,7 +36,7 @@ public class UserController {
 	@ResponseBody
 	public String register(User user, Shop shop) {
 		userService.register(user, shop);
-		return "{\"a\":\"a\"}";
+		return "{\"result\":\"注册成功\"}";
 	}
 
 	// 初始化：根据获取的用户uid，查询用户表地址
@@ -49,15 +49,15 @@ public class UserController {
 	// 更改用户信息
 	@RequestMapping("changeUserById/{id}")
 	@ResponseBody
-	public void changeUserById(@PathVariable int id, User user) {
+	public String changeUserById(@PathVariable int id, User user) {
 		userService.changeUserById(id, user);
+		return "{\"result\":\"修改成功\"}";
 	}
 
 	// 查询用户信息
 	@RequestMapping("selectUserById/{uid}")
 	@ResponseBody
 	public User selectUserById(@PathVariable int uid) {
-		System.out.println("到con");
 		return userService.selectUserById(uid);
 	}
 

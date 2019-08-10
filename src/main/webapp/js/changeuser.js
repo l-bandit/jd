@@ -28,6 +28,7 @@ $(document).ready(function(){
 			data:$("form").serialize(),
 			dataType:'json',
 			success:function(data){
+				console.log(data);
 				alert("更改成功！");
 			}
 		})

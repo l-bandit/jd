@@ -358,3 +358,37 @@ body {
 #slide_buy{
 	background-color: red;
 }
+
+#purchase{
+	display: none;
+	width: 50%;
+	height: 80px;
+	border-radius: 30px;
+	opacity: 0.8;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	background-color: #303030;
+	color: white;
+	font-size: 22px;
+	text-align: center;
+	line-height: 80px;
+}
+
+#shoppingcart{
+	display: none;
+	width: 50%;
+	height: 80px;
+	border-radius: 30px;
+	opacity: 0.8;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	background-color: #303030;
+	color: white;
+	font-size: 22px;
+	text-align: center;
+	line-height: 80px;
+}

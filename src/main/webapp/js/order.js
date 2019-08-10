@@ -4,6 +4,7 @@ $(document).ready(function(){
 	})
 	//获取用户uid
 	var uid = sessionStorage.uid;
+	
 	var pagesize=3;
 	var pagenum=1;
 	loadOrders();

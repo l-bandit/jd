@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/changeuser.css"/>
-		<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-		<script type="text/javascript" src="js/changuser.js"></script>
-		<title></title>
-	</head>
-	<body>
-		<div id="center">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/changeuser.css" />
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/changeuser.js"></script>
+<title></title>
+</head>
+<body>
+	<div id="center">
 		<img src="img/return.gif" id="return">
 		<h4>我的信息</h4>
-		<form method="post" id="mess"> 
-		<img id="userimg" src="img/evaluation-head.gif">
-		<p id="username"></p>
-		<br />
-		<div id="i_username"><img id="use" src="img/chang-user.gif"/> <p> 用户姓名：</p> <input type="text" name="username" id="name"/></div>
-
-		<div id="i_userpass"><img id="use" src="img/change-password.gif" /> <p>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</p> <input type="text" name="password" id="pass"/></div>
-		 <div id="i_useradd"> <img id="use" src="img/chang-add.gif" /><p>收货地址：</p><input type="text" name="address" id="add"/></div>
-		 <div id="i_useradd"> <img id="use" src="img/change-ph.gif" /><p>联系电话：</p><input type="text" name="phone" id="pho"/></div>
-          <button type="button" id="subbt"> 提交修改</button>
+		<form method="post" id="mess">
+			<img id="userimg" src="img/evaluation-head.gif">
+			<p id="username"></p>
+			<br />
+			<div id="i_username">
+				<img id="use" src="img/chang-user.gif" />
+				<p>用户姓名：</p>
+				<input type="text" name="name" id="name" />
+			</div>
+			<div id="i_userpass">
+				<img id="use" src="img/change-password.gif" />
+				<p>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</p>
+				<input type="text" name="password" id="pass" />
+			</div>
+			<div id="i_useradd">
+				<img id="use" src="img/chang-add.gif" />
+				<p>收货地址：</p>
+				<input type="text" name="address" id="add" />
+			</div>
+			<div id="i_useradd">
+				<img id="use" src="img/change-ph.gif" />
+				<p>联系电话：</p>
+				<input type="text" name="phone" id="pho" />
+			</div>
+			<button type="button" id="subbt">提交修改</button>
 		</form>
-		</div>
-	</body>
+	</div>
+</body>
 </html>

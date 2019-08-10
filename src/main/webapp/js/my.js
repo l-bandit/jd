@@ -14,7 +14,7 @@ $(document).ready(function(){
 		location.href="evaluationwait.html"
 	})
 	$("#div3-1-2").click(function(){
-		location.href="order.html?id=1";
+		location.href="order.html";
 	})
 	$("#div3-1-3").click(function(){
 		location.href="wallet.html"

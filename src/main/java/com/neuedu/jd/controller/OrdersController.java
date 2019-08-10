@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.neuedu.jd.model.bean.Orders;
+import com.neuedu.jd.model.service.OrdersService;
 import com.neuedu.jd.model.service.UserService;
 
 @Controller
@@ -16,6 +17,17 @@ public class OrdersController {
 	
 	@Autowired
 	private UserService userservice;
+	
+	@Autowired
+	private OrdersService ordersService;
+	
+	//在订单表上传一条数据，传入用户uid、商品cid、购买数量count、是否已评价、当前系统时间
+	@RequestMapping("insertOrders/{uid}/{cid}/{count}")
+	@ResponseBody
+	public String insertOrders(@PathVariable int uid,@PathVariable int cid,@PathVariable int count) {
+		ordersService.insertOrders(uid,cid,count);
+		return "{\"result\":\"加入订单成功\"}";
+	}
 	
 	@RequestMapping("selectOrders/{uid}/{pagenum}/{pagesize}")
 	@ResponseBody

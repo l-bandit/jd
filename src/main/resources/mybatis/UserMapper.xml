@@ -32,7 +32,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<update id="changeUserById" parameterType="Map">
-		update user set username=#{k_name},password=#{k_password},address=#{k_address},phone=#{k_phone} 
+		update user set name=#{k_name},password=#{k_password},address=#{k_address},phone=#{k_phone} 
 		where id=#{k_id}
 	</update>
 	<select id="selectUserById" parameterType="int" resultType="User">
