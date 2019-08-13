@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	//登录，并往html5作用域储存用户id
-	var uid = 0;
+	var uid;
 	$(document).on("click","#login_button",function(){
 		$.ajax({
 			type:"post",
@@ -29,8 +29,5 @@ $(document).ready(function(){
 	$(document).on("click","#register_p",function(){
 		location.href = "home.html";
 	});
-	
-	
-	
-	
+		
 })
